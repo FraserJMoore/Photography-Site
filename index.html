@@ -906,6 +906,11 @@
   </footer>
 
   <script>
+    // ── Disable right-click on images ────────────────────────────────────────
+    document.addEventListener('contextmenu', e => {
+      if (e.target.tagName === 'IMG') e.preventDefault();
+    });
+
     // ── Sticky nav ───────────────────────────────────────────────────────────
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
